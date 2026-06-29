@@ -15,10 +15,26 @@ Grab the latest build from **[Releases](../../releases)** → `FoxFlowAgent.zip`
 
 1. Unzip anywhere.
 2. Run `FoxFlowAgent.exe` once. It starts in the background and a small console window
-   shows its status.
-3. Open the FoxFlow website — it connects to the agent automatically.
+   shows its status. It opens the FoxFlow website in a tab in your normal Chrome and
+   connects automatically.
+3. If Chrome was already open, the agent restarts it once (so it can drive Flow). Your
+   tabs are restored — Chrome reopens with "Continue where you left off".
 
 Windows 10/11. No Python install needed — everything is bundled.
+
+### "Windows protected your PC" (SmartScreen)
+
+The agent isn't signed with a paid code-signing certificate yet, so Windows shows a blue
+**SmartScreen** warning the first time. This is a reputation prompt for new apps — not a
+virus detection. To run it:
+
+1. Click **More info**.
+2. Click **Run anyway**.
+
+That's it — Windows remembers your choice and won't ask again. You can verify the file
+yourself: the source behaviour is described below, and the agent only listens on
+`127.0.0.1` (your machine). Want extra assurance? Scan the `.exe` on
+[VirusTotal](https://www.virustotal.com) before running.
 
 ## Is it safe? What it does and doesn't
 
